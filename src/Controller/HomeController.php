@@ -15,4 +15,10 @@ final class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
+    #[Route('/up', name: 'app_up')]
+    public function up(): Response
+    {
+        return new Response("Ok");
+    }
 }
