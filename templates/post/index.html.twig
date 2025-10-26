@@ -19,7 +19,7 @@
         {% for post in posts %}
             <tr>
                 <td>{{ post.id }}</td>
-                <td>{{ post.title }}</td>
+                <td id="post_{{ post.id }}">{{ post.title }}</td>
                 <td>{{ post.body }}</td>
                 <td>{{ post.postedAt ? post.postedAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
