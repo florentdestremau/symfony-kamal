@@ -45,6 +45,9 @@ test: ## Start tests with phpunit, pass the parameter "c=" to add options to php
 deploy:
 	kamal deploy
 
+kamal-shell:
+	kamal shell
+
 ## —— Composer 🧙 ——————————————————————————————————————————————————————————————
 composer: ## Run composer, pass the parameter "c=" to run a given command, example: make composer c='req symfony/orm-pack'
 	@$(eval c ?=)
