@@ -8,6 +8,11 @@ image: florentcc/symfony-kamal
 servers:
   web:
     - 174.138.3.138
+#  job:
+#    hosts:
+#      - 174.138.3.138
+#    cmd: php bin/console messenger:consume async --time-limit=3600 --memory-limit=128M -vv
+
 
 # Note: If using Cloudflare, set encryption mode in SSL/TLS setting to "Full" to enable CF-to-app encryption.
 proxy:
