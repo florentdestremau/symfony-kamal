@@ -57,6 +57,10 @@ if [ "$1" = 'frankenphp' ] || [ "$1" = 'php' ] || [ "$1" = 'bin/console' ]; then
 		fi
 	fi
 
+	if [ -f importmap.php ]; then
+		php bin/console asset-map:compile
+	fi
+
 	echo 'PHP app ready!'
 fi
 
