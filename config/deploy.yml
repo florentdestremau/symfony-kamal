@@ -44,8 +44,8 @@ env:
   clear:
     DATABASE_URL: "postgresql://app:!ChangeMe!@symfony-kamal-database:5432/app?serverVersion=16&charset=utf8"
     APP_SECRET: "cbdb5d708a3d7078dbef5a0a80bee3a16c6a85c52f33f4bbe41d"
-#   secret:
-#     - RAILS_MASTER_KEY
+#  secret:
+#    - RAILS_MASTER_KEY
 
 # Aliases are triggered with "bin/kamal <alias>". You can overwrite arguments on invocation:
 # "bin/kamal app logs -r job" will tail logs from the first server in the job section.
