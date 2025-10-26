@@ -63,7 +63,7 @@ asset_path: /app/public/assets
 # Use accessory services (secrets come from .kamal/secrets).
 accessories:
   database:
-    image: postgres:16-alpine
+    image: postgres:17-alpine
     host: 174.138.3.138
     port: 5432
     env:
@@ -73,7 +73,7 @@ accessories:
         - POSTGRES_PASSWORD
         - POSTGRES_USER
     directories:
-      - database_data:/var/lib/postgresql/data:rw
+      - /var/lib/symfony-kamal-database-data:/var/lib/postgresql/data:rw
 
 # accessories:
 #   db:
