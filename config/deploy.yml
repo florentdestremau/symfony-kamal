@@ -16,6 +16,7 @@ servers:
 proxy:
   ssl: true
   host: symfony-kamal.florent.cc
+  forward_headers: true
   # Proxy connects to your container on port 80 by default.
   # app_port: 3000
 
