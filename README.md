@@ -23,7 +23,8 @@ A Symfony Docker app deployed with [kamal](https://github.com/basecamp/kamal).
 
 ## Getting Started
 
-1. If not already done, [install Docker Compose](https://docs.docker.com/compose/install/) (v2.10+)
+1. Clone this project `git clone https://github.com/florentdestremau/symfony-kamal.git`
+2. If not already done, [install Docker Compose](https://docs.docker.com/compose/install/) (v2.10+)
 2. Run `make start` to build fresh images and start the Docker containers
 3. Run `make up` to start the project afterwards.
 4. Open `https://symfony-kamal.localhost` in your favorite web browser

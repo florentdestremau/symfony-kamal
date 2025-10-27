@@ -3,27 +3,7 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-    <h1>
-        Hello, welcome to
-        <br>
-        <span style="text-decoration: underline">Symfony-Kamal</span>
-    </h1>
-
-    <p>
-        Deploy your Symfony app on a single vps with Kamal!
-        Using:
-    </p>
-    <ul>
-        <li>
-            <a target="_blank" href="https://kamal-deploy.org/">Kamal</a>
-        </li>
-        <li>
-            <a target="_blank" href="https://www.symfony.com">Symfony 7.3</a>
-        </li>
-        <li>
-            <a target="_blank" href="https://github.com/dunglas/symfony-docker">Symfony-docker template</a>
-        </li>
-    </ul>
+    {{ readme|markdown_to_html }}
     <p>
         See this project on GitHub:
     </p>

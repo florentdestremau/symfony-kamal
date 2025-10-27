@@ -22,7 +22,7 @@ build: ## Builds the Docker images
 	@$(DOCKER_COMP) build --pull --no-cache
 
 up: ## Start the docker hub in detached mode (no logs)
-	@$(DOCKER_COMP) up --detach
+	@$(DOCKER_COMP) --env-file .env --env-file .env.local up --detach
 	@echo "Server up on https://symfony-kamal.localhost"
 
 start: build up ## Build and start the containers

@@ -12,7 +12,9 @@ final class HomeController extends AbstractController
     #[Route('', name: 'app_home')]
     public function home(): Response
     {
-        return $this->render('home.html.twig');
+        $readme = (string) file_get_contents(__DIR__ . '/../../README.md');
+
+        return $this->render('home.html.twig', ['readme' => $readme]);
     }
 
     #[Route('/up', name: 'app_up')]
