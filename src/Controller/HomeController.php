@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -9,16 +10,28 @@ use Symfony\Component\Routing\Attribute\Route;
 final class HomeController extends AbstractController
 {
     #[Route('', name: 'app_home')]
-    public function index(): Response
+    public function home(): Response
     {
-        return $this->render('home/index.html.twig', [
-            'controller_name' => 'HomeController',
-        ]);
+        return $this->render('home.html.twig');
     }
 
     #[Route('/up', name: 'app_up')]
-    public function up(): Response
+    public function up(EntityManagerInterface $entityManager): Response
     {
-        return new Response("Ok");
+        $startTime = microtime(true);
+
+        $dbStartTime = microtime(true);
+        $entityManager->getConnection()->executeQuery('SELECT 1');
+        $dbTime = (microtime(true) - $dbStartTime) * 1000;
+
+        $totalTime = (microtime(true) - $startTime) * 1000;
+
+        $response = sprintf(
+            "OK database: Up - %.3fms - Total Time - %.3fms",
+            $dbTime,
+            $totalTime,
+        );
+
+        return new Response($response);
     }
 }

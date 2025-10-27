@@ -1,12 +1,15 @@
 :root {
-    --bg: #ffd7d7;
-
+    --accent: #0d47a1;
+    --accent-hover: #1266e2;
 }
+
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg: #3a2626;
+        --accent: rgb(65, 146, 223);
+        --accent-hover: rgba(65, 146, 223, 0.6);
     }
 }
+
 
 h1 {
     text-align: center;
