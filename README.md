@@ -19,13 +19,16 @@ A Symfony Docker app deployed with [kamal](https://github.com/basecamp/kamal).
 
 # Notable files
 
-- `config/deploy.yml`
+- `config/deploy.yml`: the deploy configuration
+- `.kamal/secrets`: secrets configuration, to be pulled from an external vault in the future
+- `frankenphp/Caddyfile`: allow http request on /up
+- A new route `/up` serving as healthcheck
 
 ## Getting Started
 
 1. Clone this project `git clone https://github.com/florentdestremau/symfony-kamal.git`
 2. If not already done, [install Docker Compose](https://docs.docker.com/compose/install/) (v2.10+)
-2. Run `make start` to build fresh images and start the Docker containers
-3. Run `make up` to start the project afterwards.
-4. Open `https://symfony-kamal.localhost` in your favorite web browser
-5. Run `make down` to stop the Docker containers.
+3. Run `make start` to build fresh images and start the Docker containers
+4. Run `make up` to start the project afterwards.
+5. Open `https://symfony-kamal.localhost` in your favorite web browser
+6. Run `make down` to stop the Docker containers.
