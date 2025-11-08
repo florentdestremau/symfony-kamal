@@ -1,5 +1,5 @@
 {% block textarea_widget %}
-    <lexxy-editor name="post[body]" attachments="false" value="{{ form.vars.value|raw }}"
+    <lexxy-editor name="post[body]" attachments="false" value="{{ form.vars.value }}"
                   placeholder="{{ form.vars.placeholder ?? '' }}">
     </lexxy-editor>
 {% endblock %}
