@@ -1,10 +1,11 @@
 # Symfony + Kamal
 
-A Symfony Docker app deployed with [kamal](https://github.com/basecamp/kamal).
+A Symfony Docker app deployed with Kamal, using the symfony-docker template.
+Deploy your Symfony project on any VPS in less than 15s, no docker registry needed!
 
 - PHP 8.4
-- FrankenPHP
-- Kamal
+- [FrankenPHP](https://frankenphp.dev)
+- [kamal](https://kamal-deploy.org/).
 - Deployed to a single VPS on Digital Ocean
 
 # Roadmap

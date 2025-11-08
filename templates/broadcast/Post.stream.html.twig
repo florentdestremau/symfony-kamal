@@ -12,7 +12,9 @@
 {% block update %}
     <turbo-stream action="update" target="post_{{ id }}">
         <template>
-            #{{ title }} updated
+            {% if title is defined %}
+                #{{ title }} updated
+            {% endif %}
         </template>
     </turbo-stream>
 {% endblock %}

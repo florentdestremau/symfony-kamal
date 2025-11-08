@@ -17,7 +17,15 @@
             </tr>
             <tr>
                 <th>Body</th>
-                <td>{{ post.body }}</td>
+                <td>
+                    <div class="lexxy-content">
+                        {{ post.body|raw }}
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>Author</th>
+                <td>{{ post.author }}</td>
             </tr>
             <tr>
                 <th>PostedAt</th>

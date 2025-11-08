@@ -96,9 +96,7 @@ RUN set -eux; \
 	composer dump-autoload --classmap-authoritative --no-dev; \
 	composer dump-env prod; \
 	composer run-script --no-dev post-install-cmd; \
+    if grep -q '"symfony/asset-mapper"' composer.json; then \
+        php bin/console asset-map:compile; \
+    fi; \
 	chmod +x bin/console; sync;
-
-RUN if [ -f importmap.php ]; then \
-    php bin/console importmap:install;\
-    php bin/console asset-map:compile;\
-fi
